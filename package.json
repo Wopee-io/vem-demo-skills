@@ -1,0 +1,26 @@
+{
+  "type": "commonjs",
+  "dependencies": {
+    "@ai-sdk/azure": "^2.0.7",
+    "@playwright/test": "^1.54.2",
+    "@wopee-io/wopee.pw": "^4.21.1",
+    "ai": "^5.0.8",
+    "axios": "^1.11.0",
+    "cli-table3": "^0.6.5",
+    "html-minifier-terser": "^7.2.0",
+    "parse5": "^7.3.0",
+    "speakeasy": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "test": "npm run pw",
+    "agent": "playwright test ./agents/run-agent.spec.ts --config playwright.config.ts",
+    "pw": "playwright test ./tests/ --config playwright.config.ts"
+  },
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.19"
+  }
+}

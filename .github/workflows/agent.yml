@@ -1,0 +1,15 @@
+name: AI Agent for software testing
+run-name: ${{ github.event.client_payload.runName }}
+
+on:
+  repository_dispatch:
+    types: [agent, crawl]
+
+jobs:
+  test:
+    name: ${{ github.event.action}}
+    runs-on: self-hosted
+    steps:
+      - uses: Wopee-io/run-agent@v1
+        env:
+          WOPEE_API_KEY: ${{ secrets.WOPEE_API_KEY }}

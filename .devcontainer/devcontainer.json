@@ -1,0 +1,24 @@
+{
+  "name": "Wopee.io AI Testing Agents",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ],
+      "settings": {
+        "mcpServers": {
+          "wopee": {
+            "command": "npx",
+            "args": [
+              "wopee-mcp@latest"
+            ],
+            "env": {}
+          }
+        }
+      }
+    }
+  }
+}
+

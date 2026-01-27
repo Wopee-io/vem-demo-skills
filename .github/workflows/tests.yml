@@ -1,0 +1,16 @@
+name: Run Playwright tests
+run-name: ${{ github.event.client_payload.runName }}
+
+on:
+  repository_dispatch:
+    types: [run, code]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: ${{ github.event.action}}
+    runs-on: self-hosted
+    steps:
+      - uses: Wopee-io/run-playwright@v1
+        env:
+          WOPEE_API_KEY: ${{ secrets.WOPEE_API_KEY }}
