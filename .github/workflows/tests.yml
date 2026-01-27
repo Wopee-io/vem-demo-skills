@@ -11,6 +11,6 @@ jobs:
     name: ${{ github.event.action}}
     runs-on: self-hosted
     steps:
-      - uses: Wopee-io/run-playwright@v1
+      - uses: Wopee-io-DEV/run-playwright@v1
         env:
           WOPEE_API_KEY: ${{ secrets.WOPEE_API_KEY }}

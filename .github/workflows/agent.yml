@@ -10,6 +10,6 @@ jobs:
     name: ${{ github.event.action}}
     runs-on: self-hosted
     steps:
-      - uses: Wopee-io/run-agent@v1
+      - uses: Wopee-io-DEV/run-agent@v1
         env:
           WOPEE_API_KEY: ${{ secrets.WOPEE_API_KEY }}
