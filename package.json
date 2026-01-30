@@ -7,6 +7,7 @@
     "ai": "^5.0.8",
     "axios": "^1.11.0",
     "cli-table3": "^0.6.5",
+    "dotenv": "^17.2.3",
     "html-minifier-terser": "^7.2.0",
     "parse5": "^7.3.0",
     "speakeasy": "^2.0.0",
@@ -21,6 +22,7 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@types/node": "^22.15.19"
+    "@types/node": "^22.15.19",
+    "ts-node": "^10.9.2"
   }
 }
