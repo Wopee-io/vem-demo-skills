@@ -180,6 +180,13 @@
               }
             }
           ]
+        },
+        {
+          "testCaseId": "TC003",
+          "name": "[KAN-TC-4] Prihlas sa s prazdnym menom",
+          "description": "Test imported from AIO Tests - Verify that the system properly handles login with empty username.",
+          "userStoryId": "US001",
+          "steps": []
         }
       ]
     },
