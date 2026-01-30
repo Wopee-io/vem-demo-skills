@@ -92,6 +92,94 @@
               }
             }
           ]
+        },
+        {
+          "testCaseId": "TC002",
+          "name": "Prihlas sa s prazdnym menom",
+          "description": "Verify that the system properly handles and displays appropriate error messages when a user attempts to log in with empty username.",
+          "userStoryId": "US001",
+          "steps": [
+            {
+              "name": "Navigate to the login page",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "NAVIGATE",
+                "data": {
+                  "value": null,
+                  "url": "https://www.saucedemo.com",
+                  "locator": null,
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Leave username field empty",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"username\"]",
+                  "filament": "",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Enter password in the password field",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"password\"]",
+                  "filament": "secret_sauce",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Click the Login button",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "CLICK",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"login-button\"]",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Verify error message is displayed",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "TEXT_ASSERT",
+                "data": {
+                  "value": "Username is required",
+                  "url": null,
+                  "locator": ".error-message-container",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": false
+                }
+              }
+            }
+          ]
         }
       ]
     },
