@@ -316,6 +316,37 @@
           ]
         }
       ]
+    },
+    {
+      "userStoryId": "US003",
+      "userStoryName": "API Integration Testing",
+      "userStoryCategory": "API Testing",
+      "testCases": [
+        {
+          "testCaseId": "TC001",
+          "name": "[KAN-TC-5] Trochu mozno total halzzz",
+          "description": "Test that creates a new test case in AIO Tests via HTTP request",
+          "userStoryId": "US003",
+          "steps": [
+            {
+              "name": "Send HTTP POST request to create test in AIO Tests",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "HTTP_REQUEST",
+                "data": {
+                  "value": null,
+                  "url": "https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/KAN/testcase",
+                  "locator": null,
+                  "filament": "{\"title\":\"Trochu mozno total halzzz\"}",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
