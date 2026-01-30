@@ -1,1 +1,430 @@
-{"userStories":[{"userStoryId":"R001","userStoryName":"Reusable test cases","userStoryCategory":"Reusable Blocks","testCases":[]},{"userStoryId":"US001","userStoryName":"Authentication Testing","userStoryCategory":"User Authentication","testCases":[{"testCaseId":"TC001","name":"Login with invalid credentials","description":"Verify that the system properly handles and displays appropriate error messages when a user attempts to log in with incorrect credentials.","userStoryId":"US001","steps":[{"name":"Navigate to the login page","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"NAVIGATE","data":{"value":null,"url":"https://www.saucedemo.com","locator":null,"filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Enter invalid username in the username field","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"FILL","data":{"value":null,"url":null,"locator":"[data-test=\"username\"]","filament":"invalid_user","cookieName":null,"negateAssert":null}}},{"name":"Enter invalid password in the password field","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"FILL","data":{"value":null,"url":null,"locator":"[data-test=\"password\"]","filament":"invalid_password","cookieName":null,"negateAssert":null}}},{"name":"Click the Login button","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"CLICK","data":{"value":null,"url":null,"locator":"[data-test=\"login-button\"]","filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Verify error message is displayed","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"TEXT_ASSERT","data":{"value":"Username and password do not match any user in this service","url":null,"locator":".error-message-container","filament":null,"cookieName":null,"negateAssert":false}}}]},{"testCaseId":"TC002","name":"Prihlas sa s prazdnym menom","description":"Verify that the system properly handles and displays appropriate error messages when a user attempts to log in with empty username.","userStoryId":"US001","steps":[{"name":"Navigate to the login page","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"NAVIGATE","data":{"value":null,"url":"https://www.saucedemo.com","locator":null,"filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Leave username field empty","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"FILL","data":{"value":null,"url":null,"locator":"[data-test=\"username\"]","filament":"","cookieName":null,"negateAssert":null}}},{"name":"Enter password in the password field","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"FILL","data":{"value":null,"url":null,"locator":"[data-test=\"password\"]","filament":"secret_sauce","cookieName":null,"negateAssert":null}}},{"name":"Click the Login button","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"CLICK","data":{"value":null,"url":null,"locator":"[data-test=\"login-button\"]","filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Verify error message is displayed","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"TEXT_ASSERT","data":{"value":"Username is required","url":null,"locator":".error-message-container","filament":null,"cookieName":null,"negateAssert":false}}}]},{"testCaseId":"TC003","name":"[KAN-TC-4] Prihlas sa s prazdnym menom","description":"Test imported from AIO Tests - Verify that the system properly handles login with empty username.","userStoryId":"US001","steps":[]}]},{"userStoryId":"US002","userStoryName":"Shopping Cart Management","userStoryCategory":"Cart Operations","testCases":[{"testCaseId":"TC001","name":"Add 2 products into shopping cart","description":"Verify that users can successfully add two products to the shopping cart and that the cart badge reflects the correct count.","userStoryId":"US002","steps":[{"name":"Navigate to the login page and log in with valid credentials","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"NAVIGATE","data":{"value":null,"url":"https://www.saucedemo.com","locator":null,"filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Fill in username field with valid credentials","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"FILL","data":{"value":null,"url":null,"locator":"[data-test=\"username\"]","filament":"standard_user","cookieName":null,"negateAssert":null}}},{"name":"Fill in password field","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"FILL","data":{"value":null,"url":null,"locator":"[data-test=\"password\"]","filament":"secret_sauce","cookieName":null,"negateAssert":null}}},{"name":"Click Login button","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"CLICK","data":{"value":null,"url":null,"locator":"[data-test=\"login-button\"]","filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Add first product (Sauce Labs Backpack) to cart","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"CLICK","data":{"value":null,"url":null,"locator":"[data-test=\"add-to-cart-sauce-labs-backpack\"]","filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Add second product (Sauce Labs Bike Light) to cart","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"CLICK","data":{"value":null,"url":null,"locator":"[data-test=\"add-to-cart-sauce-labs-bike-light\"]","filament":null,"cookieName":null,"negateAssert":null}}},{"name":"Verify cart badge shows 2 items","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"TEXT_ASSERT","data":{"value":"2","url":null,"locator":".shopping_cart_badge","filament":null,"cookieName":null,"negateAssert":false}}}]}]},{"userStoryId":"US003","userStoryName":"API Integration Testing","userStoryCategory":"API Testing","testCases":[{"testCaseId":"TC001","name":"[KAN-TC-5] Create test case via AIO Tests API","description":"Test that creates a new test case in AIO Tests via HTTP POST request. Do not validate or assert, just call the API as described in the.","userStoryId":"US003","steps":[{"name":"Send HTTP POST request to create test in AIO Tests","reusedUserStoryId":null,"reusedTestCaseId":null,"action":{"actionType":"HTTP_REQUEST","data":{"cookieName":null,"value":"{\n  \"method\": \"POST\",\n  \"headers\": {\n    \"Content-Type\": \"application/json\",\n    \"Accept\": \"application/json\",\n    \"Authorization\": \"AioAuth ODE1ZjE2MmUtYTAxNS0zNThjLTgwMGYtOTRiZGQ0MmNkMTdiLmZkZGNjN2UzLWEwYmQtNDYwZC04Y2Q4LTg5NzlmZjU1ZWE4Yg==\"\n  },\n  \"body\": \"{\\\"title\\\":\\\"Trochu mozno total halzzz 🚀🦍🍻🍺\\\"}\"\n}","url":"https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/KAN/testcase","locator":null,"filament":null,"negateAssert":null}}},{"name":"Make sure that response contains key `KAN-TC-7`","action":{"actionType":"CUSTOM","data":{"cookieName":null,"value":null,"url":null,"locator":null,"filament":null,"negateAssert":null}}}]}]}]}
+{
+  "userStories": [
+    {
+      "userStoryId": "R001",
+      "userStoryName": "Reusable test cases",
+      "userStoryCategory": "Reusable Blocks",
+      "testCases": []
+    },
+    {
+      "userStoryId": "US001",
+      "userStoryName": "Authentication Testing",
+      "userStoryCategory": "User Authentication",
+      "testCases": [
+        {
+          "testCaseId": "TC001",
+          "name": "Login with invalid credentials",
+          "description": "Verify that the system properly handles and displays appropriate error messages when a user attempts to log in with incorrect credentials.",
+          "userStoryId": "US001",
+          "steps": [
+            {
+              "name": "Navigate to the login page",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "NAVIGATE",
+                "data": {
+                  "value": null,
+                  "url": "https://www.saucedemo.com",
+                  "locator": null,
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Enter invalid username in the username field",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"username\"]",
+                  "filament": "invalid_user",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Enter invalid password in the password field",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"password\"]",
+                  "filament": "invalid_password",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Click the Login button",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "CLICK",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"login-button\"]",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Verify error message is displayed",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "TEXT_ASSERT",
+                "data": {
+                  "value": "Username and password do not match any user in this service",
+                  "url": null,
+                  "locator": ".error-message-container",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "testCaseId": "TC002",
+          "name": "Prihlas sa s prazdnym menom",
+          "description": "Verify that the system properly handles and displays appropriate error messages when a user attempts to log in with empty username.",
+          "userStoryId": "US001",
+          "steps": [
+            {
+              "name": "Navigate to the login page",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "NAVIGATE",
+                "data": {
+                  "value": null,
+                  "url": "https://www.saucedemo.com",
+                  "locator": null,
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Leave username field empty",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"username\"]",
+                  "filament": "",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Enter password in the password field",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"password\"]",
+                  "filament": "secret_sauce",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Click the Login button",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "CLICK",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"login-button\"]",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Verify error message is displayed",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "TEXT_ASSERT",
+                "data": {
+                  "value": "Username is required",
+                  "url": null,
+                  "locator": ".error-message-container",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "testCaseId": "TC003",
+          "name": "[KAN-TC-4] Prihlas sa s prazdnym menom",
+          "description": "Test imported from AIO Tests - Verify that the system properly handles login with empty username.",
+          "userStoryId": "US001",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "userStoryId": "US002",
+      "userStoryName": "Shopping Cart Management",
+      "userStoryCategory": "Cart Operations",
+      "testCases": [
+        {
+          "testCaseId": "TC001",
+          "name": "Add 2 products into shopping cart",
+          "description": "Verify that users can successfully add two products to the shopping cart and that the cart badge reflects the correct count.",
+          "userStoryId": "US002",
+          "steps": [
+            {
+              "name": "Navigate to the login page and log in with valid credentials",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "NAVIGATE",
+                "data": {
+                  "value": null,
+                  "url": "https://www.saucedemo.com",
+                  "locator": null,
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Fill in username field with valid credentials",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"username\"]",
+                  "filament": "standard_user",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Fill in password field",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "FILL",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"password\"]",
+                  "filament": "secret_sauce",
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Click Login button",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "CLICK",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"login-button\"]",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Add first product (Sauce Labs Backpack) to cart",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "CLICK",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"add-to-cart-sauce-labs-backpack\"]",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Add second product (Sauce Labs Bike Light) to cart",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "CLICK",
+                "data": {
+                  "value": null,
+                  "url": null,
+                  "locator": "[data-test=\"add-to-cart-sauce-labs-bike-light\"]",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Verify cart badge shows 2 items",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "TEXT_ASSERT",
+                "data": {
+                  "value": "2",
+                  "url": null,
+                  "locator": ".shopping_cart_badge",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "userStoryId": "US003",
+      "userStoryName": "API Integration Testing",
+      "userStoryCategory": "API Testing",
+      "testCases": [
+        {
+          "testCaseId": "TC001",
+          "name": "[KAN-TC-5] Create test case via AIO Tests API",
+          "description": "Test that creates a new test case in AIO Tests via HTTP POST request. Do not validate or assert, just call the API as described in the.",
+          "userStoryId": "US003",
+          "steps": [
+            {
+              "name": "Send HTTP POST request to create test in AIO Tests",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "HTTP_REQUEST",
+                "data": {
+                  "cookieName": null,
+                  "value": "{\n  \"method\": \"POST\",\n  \"headers\": {\n    \"Content-Type\": \"application/json\",\n    \"Accept\": \"application/json\",\n    \"Authorization\": \"AioAuth ODE1ZjE2MmUtYTAxNS0zNThjLTgwMGYtOTRiZGQ0MmNkMTdiLmZkZGNjN2UzLWEwYmQtNDYwZC04Y2Q4LTg5NzlmZjU1ZWE4Yg==\"\n  },\n  \"body\": \"{\\\"title\\\":\\\"Trochu mozno total halzzz 🚀🦍🍻🍺\\\"}\"\n}",
+                  "url": "https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/KAN/testcase",
+                  "locator": null,
+                  "filament": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Make sure that response contains key `KAN-TC-7`",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "CUSTOM",
+                "data": {
+                  "cookieName": null,
+                  "value": null,
+                  "url": null,
+                  "locator": null,
+                  "filament": null,
+                  "negateAssert": null
+                }
+              }
+            }
+          ]
+        },
+        {
+          "testCaseId": "TC002",
+          "name": "Verify test exists in AIO Tests",
+          "description": "Test that verifies the created test case exists in AIO Tests by fetching all tests and checking for its presence",
+          "userStoryId": "US003",
+          "steps": [
+            {
+              "name": "Send HTTP GET request to fetch all tests from AIO Tests",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "HTTP_REQUEST",
+                "data": {
+                  "cookieName": null,
+                  "value": "{\n  \"method\": \"GET\",\n  \"headers\": {\n    \"Accept\": \"application/json\",\n    \"Authorization\": \"AioAuth ODE1ZjE2MmUtYTAxNS0zNThjLTgwMGYtOTRiZGQ0MmNkMTdiLmZkZGNjN2UzLWEwYmQtNDYwZC04Y2Q4LTg5NzlmZjU1ZWE4Yg==\"\n  }\n}",
+                  "url": "https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/KAN/testcase?startAt=0&maxResults=100&needDataInRTF=false",
+                  "locator": null,
+                  "filament": null,
+                  "negateAssert": null
+                }
+              }
+            },
+            {
+              "name": "Verify response contains test with title 'Trochu mozno total halzzz'",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "JSON_ASSERT",
+                "data": {
+                  "value": "Trochu mozno total halzzz",
+                  "url": null,
+                  "locator": "$.items[?(@.title == 'Trochu mozno total halzzz')].title",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": false
+                }
+              }
+            },
+            {
+              "name": "Verify response contains test with key starting with 'KAN-TC-'",
+              "reusedUserStoryId": null,
+              "reusedTestCaseId": null,
+              "action": {
+                "actionType": "JSON_ASSERT",
+                "data": {
+                  "value": "KAN-TC-",
+                  "url": null,
+                  "locator": "$.items[?(@.title == 'Trochu mozno total halzzz')].key",
+                  "filament": null,
+                  "cookieName": null,
+                  "negateAssert": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
