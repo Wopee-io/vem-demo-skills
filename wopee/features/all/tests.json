@@ -1,0 +1,53 @@
+{
+  "userStories": [
+    {
+      "userStoryId": "US001",
+      "userStoryName": "AIO Tests Import",
+      "userStoryCategory": "Imported from AIO Tests",
+      "testCases": [
+        {
+          "testCaseId": "TC001",
+          "name": "[KAN-TC-1] Login with invalid credentials",
+          "description": "Imported from AIO Tests - Verify that the system properly handles and displays appropriate error messages when a user attempts to log in with incorrect credentials.",
+          "userStoryId": "US001",
+          "steps": []
+        },
+        {
+          "testCaseId": "TC002",
+          "name": "[KAN-TC-3] Add 2 products into shopping cart",
+          "description": "Imported from AIO Tests - Verify that users can successfully add two products to the shopping cart and that the cart badge reflects the correct count.",
+          "userStoryId": "US001",
+          "steps": []
+        },
+        {
+          "testCaseId": "TC003",
+          "name": "[KAN-TC-4] Prihlas sa s prazdnym menom",
+          "description": "Imported from AIO Tests - Verify that the system properly handles login with empty username.",
+          "userStoryId": "US001",
+          "steps": []
+        },
+        {
+          "testCaseId": "TC004",
+          "name": "[KAN-TC-5] Trochu mozno total halzzz",
+          "description": "Imported from AIO Tests",
+          "userStoryId": "US001",
+          "steps": []
+        },
+        {
+          "testCaseId": "TC005",
+          "name": "[KAN-TC-6] Trochu mozno total halzzz 🚀",
+          "description": "Imported from AIO Tests",
+          "userStoryId": "US001",
+          "steps": []
+        },
+        {
+          "testCaseId": "TC006",
+          "name": "[KAN-TC-7] Trochu mozno total halzzz 🚀🦍🍻🍺",
+          "description": "Imported from AIO Tests",
+          "userStoryId": "US001",
+          "steps": []
+        }
+      ]
+    }
+  ]
+}
