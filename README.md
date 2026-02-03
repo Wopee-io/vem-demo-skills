@@ -57,3 +57,39 @@ Ask Copilot:
 - "Fetch AIO tests"
 - "Create a new test case in AIO Tests"
 - "Update AIO test case KAN-TC-1"
+
+## E) Zephyr Squad Integration
+
+This project includes a GitHub Copilot skill for interacting with [Zephyr Squad (JIRA Test Management)](https://marketplace.atlassian.com/apps/1014681/zephyr-squad-test-management-for-jira).
+
+### Available Operations
+
+- **Test Steps** - Create, fetch, update, and delete test steps for test issues
+- **Executions** - Create and update test executions, search using ZQL
+- **Cycles** - Manage test cycles for organizing test executions
+
+### Setup
+
+Add to your `.env` file:
+
+```env
+ZEPHYR_ACCESS_KEY=your_zephyr_access_key
+ZEPHYR_SECRET_KEY=your_zephyr_secret_key
+ZEPHYR_ACCOUNT_ID=your_jira_account_id
+JIRA_PROJECT_ID=your_project_id
+```
+
+For JWT token generation, see: [SmartBear JWT Authentication Guide](https://support.smartbear.com/zephyr-squad-cloud-v1/docs/en/zephyr-squad-cloud-rest-api/generating-a-jwt-authentication-token-for-zephyr-squad-cloud-api.html)
+
+### API Reference
+
+- [Zephyr Squad Cloud REST API Documentation](https://zephyrsquad.docs.apiary.io/)
+
+### Usage with GitHub Copilot
+
+Ask Copilot:
+
+- "Fetch Zephyr test steps"
+- "Create a new test execution in Zephyr Squad"
+- "Update Zephyr execution status to PASS"
+- "Create a test cycle in Zephyr"
